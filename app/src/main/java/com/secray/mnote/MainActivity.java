@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.ramotion.foldingcell.FoldingCell;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -24,6 +26,40 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+            }
+        });
+
+        // get our folding cell
+        final FoldingCell fc = (FoldingCell) findViewById(R.id.folding_cell1);
+        final FoldingCell fc1 = (FoldingCell) findViewById(R.id.folding_cell2);
+        final FoldingCell fc2 = (FoldingCell) findViewById(R.id.folding_cell3);
+        final FoldingCell fc3 = (FoldingCell) findViewById(R.id.folding_cell4);
+        // attach click listener to folding cell
+        fc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fc.toggle(false);
+            }
+        });
+
+        fc1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fc1.toggle(false);
+            }
+        });
+
+        fc2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fc2.toggle(false);
+            }
+        });
+
+        fc3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fc3.toggle(false);
             }
         });
     }
