@@ -13,12 +13,19 @@
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            app:contentInsetStart="0dp"
+            android:layout_marginLeft="@dimen/title_margin"
+            style="@style/AppTheme.Toolbar"
             app:layout_scrollFlags="scroll|enterAlways"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            app:popupTheme="@style/AppTheme.PopupOverlay">
 
+            <com.secray.mnote.widget.TitleTextView
+                android:text="@string/app_name"
+                style="@style/AppTheme.ToolbarTitle" />
+        </android.support.v7.widget.Toolbar>
+
+        <include layout="@layout/search_toolbar"
+            android:visibility="gone"/>
     </android.support.design.widget.AppBarLayout>
 
     <include layout="@layout/content_main" />

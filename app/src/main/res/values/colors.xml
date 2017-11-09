@@ -3,4 +3,7 @@
     <color name="colorPrimary">@color/green500</color>
     <color name="colorPrimaryDark">@color/green500</color>
     <color name="colorAccent">@color/green500</color>
+
+    <color name="colorHint">#888</color>
+    <color name="colorText">#444</color>
 </resources>
